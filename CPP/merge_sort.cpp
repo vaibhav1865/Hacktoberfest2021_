@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+// function used to merge the two sorted array 
 void merge(int array[], int const left, int const mid, int const right)
 {
     auto const subArrayOne = mid - left + 1;
@@ -43,8 +45,11 @@ void merge(int array[], int const left, int const mid, int const right)
     }
 }
 
+//function used to partition the array 
+//merge sort action is performed recursively here 
 void mergeSort(int array[], int const begin, int const end)
 {
+    //break statement for the recursive loop
     if (begin >= end)
         return; 
   
@@ -54,6 +59,8 @@ void mergeSort(int array[], int const begin, int const end)
     merge(array, begin, mid, end);
 }
 
+
+//function to print the Array
 void printArray(int A[], int size)
 {
     for (auto i = 0; i < size; i++)
